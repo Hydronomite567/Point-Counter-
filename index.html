@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <title>Point Counter</title>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <h1 style="text-align: center;">Point Counter!</h1>
+    </head>
+    <body>
+
+        <div class="main-div">
+            <div class="second-div">
+            <div class="score-div">
+                <h2 class="team-name">Team 1</h2>
+                <h1 id="ScoreA" class="score">0</h1>
+            </div>
+            <div class="time-div">
+                <h3 class="time">Time</h3>
+                <br>
+                <h2 class="time">00:00</h2>
+            </div>
+            <div class="score-div">
+                <h2 class="team-name">Team 2</h2>
+                <h1 id="ScoreB" class="score">0</h1>
+            </div>
+            </div>
+        </div>
+
+        <div style="display: flex;justify-content: center;">
+            <button id="btn">Team 1 (+1 POINT)</button>
+        </div>
+        <br>
+        <div style="display: flex;justify-content: center;">
+            <button id="btnB">Team 2 (+1 POINT)</button>
+        </div>
+        <br>
+        <script>
+            let button = document.getElementById("btn");
+            function actionBUTTON(){
+            let t1_score = document.getElementById("ScoreA")
+            let t1_actual_score = t1_score.innerText;
+            t1_score.innerText = parseInt(t1_actual_score) + 1;
+            }
+            button.addEventListener("click",actionBUTTON);
+            // --------- //
+            let buttonB = document.getElementById("btnB");
+            function actionBUTTONB(){
+                let t2_score = document.getElementById("ScoreB")
+                let t2_actual_score = t2_score.innerText;
+                t2_score.innerText = parseInt(t2_actual_score) + 1;
+            }
+            buttonB.addEventListener("click",actionBUTTONB);
+            // ---------- //
+        </script>
+    </body>
+</html>
